@@ -116,13 +116,13 @@ setTimeout(typeLetter,25);
 
 const gallery = [
 
-"assets/images/photo1.jpg",
+"photo1.jpg",
 
-"assets/images/photo2.jpg",
+"photo2.jpg",
 
-"assets/images/photo3.jpg",
+"photo3.jpg",
 
-"assets/images/maya.jpg"
+"maya.jpg"
 
 ];
 
