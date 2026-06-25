@@ -10,33 +10,18 @@ const scenes=document.querySelectorAll(".scene");
 // Pindah Scene
 function nextScene(number){
 
-const current=document.querySelector(".scene.active");
+const current = document.querySelector(".scene.active");
+const next = document.getElementById("scene" + number);
 
-current.style.opacity="0";
-current.style.transform="scale(.9)";
-
-setTimeout(()=>{
-
-current.classList.remove("active");
-
-const next=document.getElementById("scene"+number);
-
-next.classList.add("active");
-
-next.style.opacity="0";
-next.style.transform="scale(1.05)";
-
-setTimeout(()=>{
-
-next.style.opacity="1";
-next.style.transform="scale(1)";
-
-},80);
-
-},350);
-
+if(!current || !next){
+    console.log("Scene tidak ditemukan");
+    return;
 }
 
+current.classList.remove("active");
+next.classList.add("active");
+
+}
 
 // Typing Cover
 
@@ -296,39 +281,6 @@ gift.style.display="block";
 /* =====================================
    TRANSISI SCENE
 ===================================== */
-
-function nextScene(number){
-
-const current=document.querySelector(".scene.active");
-
-current.style.opacity="0";
-
-current.style.transform="scale(.9)";
-
-setTimeout(()=>{
-
-current.classList.remove("active");
-
-const next=document.getElementById("scene"+number);
-
-next.classList.add("active");
-
-next.style.opacity="0";
-
-next.style.transform="scale(1.05)";
-
-setTimeout(()=>{
-
-next.style.opacity="1";
-
-next.style.transform="scale(1)";
-
-},80);
-
-},350);
-
-}
-
 /* =====================================
    LOVE BUTTON
 ===================================== */
