@@ -8,6 +8,34 @@
 const scenes=document.querySelectorAll(".scene");
 
 // Pindah Scene
+function nextScene(number){
+
+const current=document.querySelector(".scene.active");
+
+current.style.opacity="0";
+current.style.transform="scale(.9)";
+
+setTimeout(()=>{
+
+current.classList.remove("active");
+
+const next=document.getElementById("scene"+number);
+
+next.classList.add("active");
+
+next.style.opacity="0";
+next.style.transform="scale(1.05)";
+
+setTimeout(()=>{
+
+next.style.opacity="1";
+next.style.transform="scale(1)";
+
+},80);
+
+},350);
+
+}
 
 
 // Typing Cover
